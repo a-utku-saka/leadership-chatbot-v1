@@ -1,0 +1,166 @@
+/* Background Settings */
+body {
+    font-family: Arial, sans-serif;
+    background: url('/static/image.webp') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Chat Box */
+.chat-container {
+    background: rgba(255, 255, 255, 0.15); /* Slightly transparent white */
+    backdrop-filter: blur(10px); /* Blur effect */
+    width: 450px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgba(255, 255, 255, 0.4); /*Transparent white frame */
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Chat Area */
+#chat-box {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+/* User and Bot Messages */
+.user-message, .bot-message {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+    max-width: 80%;
+}
+
+.user-message {
+    background-color: rgba(0, 128, 0, 0.8);
+    color: white;
+    align-self: flex-end;
+}
+
+.bot-message {
+    background-color: rgba(173, 216, 230, 0.7);
+    color: black;
+    align-self: flex-start;
+}
+
+/* Input and Buton */
+.input-container {
+    display: flex;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: rgb(0, 0, 0);
+}
+
+/* Placeholder White */
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+button {
+    padding: 10px;
+    background-color: rgba(0, 128, 0, 0.9);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+/* Buton Hover */
+button:hover {
+    background-color: rgba(0, 100, 0, 0.9);
+}
+/* Loading Animation */
+#loading-spinner {
+    display: none; 
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 10px auto;
+}
+
+/* Loop animation for spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Pop-up Information Box */
+.info-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 128, 0, 0.9);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 80%;
+    width: 300px;
+    z-index: 1000;
+}
+
+/* ‘I Read’ Button */
+.info-box button {
+    background-color: white;
+    color: green;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.info-box button:hover {
+    background-color: lightgray;
+}
+
+/* Microphone Button */
+#mic-button {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+#mic-button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
